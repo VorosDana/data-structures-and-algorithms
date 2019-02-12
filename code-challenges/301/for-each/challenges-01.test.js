@@ -63,14 +63,14 @@ Return the modified array.
 
 // Challenge 4 required adding an unused argument to removeOne to work with how callbacks are done with forEach
 
-const removeOne = (num, index, arr) => {
+const removeOne = (num,  arr) => {
   if(num % 3 === 2)
     arr.pop();
 }
 
 const removeElements = (arr, callback) => {
   for(let i = 0; i < arr.length; i++) {
-    callback(arr[i], null, arr);
+    callback(arr[i], arr);
   }
 
   return arr;
@@ -84,7 +84,7 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  arr.forEach(callback)
+  arr.forEach((num) => callback(num, arr))
 
   return arr;
 }
