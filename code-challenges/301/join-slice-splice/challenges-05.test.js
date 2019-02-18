@@ -135,6 +135,7 @@ For example:
   console.log(integers) will print [1, 3, 5]
 ------------------------------------------------------------------------------------------------ */
 
+s
 // feels really sloppy, but fully functional
 
 // const removeEvenValues = (arr, index = 0) => {
@@ -161,17 +162,54 @@ For example:
 //   return [arr[0]].concat(removeEvenValues(arr.slice(1)));
 // }
 
+
 // did not want to modify index, but it's the most direct route
 
+// const removeEvenValues = (arr) => {
+//   for(let i = 0; i < arr.length; i++) {
+//     if(!(arr[i] % 2)) {
+//       arr.splice(i, 1);
+//       i -= 1;
+//     }
+//   }
+//   return arr;
+// }
+
+
+// much neater, still slower than a loop
+
+// const removeEvenValues = (arr) => {
+//   if(!arr.length)
+//     return arr;
+  
+//     let num = arr.shift();
+  
+//   if(!(num % 2))
+//   {
+//     return removeEvenValues(arr);
+//   }
+
+//   removeEvenValues(arr);
+//   arr.splice(0, 0, num);
+// }
+
+// winner winner
+
 const removeEvenValues = (arr) => {
-  for(let i = 0; i < arr.length; i++) {
-    if(!(arr[i] % 2)) {
-      arr.splice(i, 1);
-      i -= 1;
+  let index = 0;
+
+  while(index < arr.length) {
+    if(!(arr[index] % 2)) {
+      arr.splice(index, 1);
+    } else {
+      index++;
     }
   }
   return arr;
 }
+
+
+// console.log(removeEvenValues([1, 2, 3, 4, 5, 6]));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
