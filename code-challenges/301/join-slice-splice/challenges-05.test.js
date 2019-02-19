@@ -135,7 +135,7 @@ For example:
   console.log(integers) will print [1, 3, 5]
 ------------------------------------------------------------------------------------------------ */
 
-s
+
 // feels really sloppy, but fully functional
 
 // const removeEvenValues = (arr, index = 0) => {
