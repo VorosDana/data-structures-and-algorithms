@@ -13,4 +13,4 @@ We are reversing an array. The examples were all integers, so we assumed that wa
 We used a swap value to reverse the array, starting from the first and last, and moving in. It runs in O(n)
 
 ### Solution
-![](./code-challenges/401/reverse-array/reverse-array-whiteboard.jpg)
+![](./code-challenges/401/assets/reverse-array-whiteboard.jpg)
